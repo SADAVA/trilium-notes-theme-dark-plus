@@ -18,3 +18,4 @@ License: `GNU General Public License v3.0`
  - Dark colors
 
 ### Made for Trilium Notes v0.43.4
+### I am open for suggestions and pull requests
