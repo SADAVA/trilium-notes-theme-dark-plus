@@ -1,0 +1,336 @@
+/*
+ * Made by SADAVA for everyone.
+ * License: GNU General Public License v3.0
+ * 
+ * Dark+ theme for Trillium Notes based on VS Code Dark+ Theme
+ * 
+ * Installation:
+ *  - create a note named: dark-plus
+ *  - copy the contents of this file to that note
+ *  - add a label attribute named: appTheme
+ *  - go to options -> appearence and change the theme there
+ *  - enjoy
+ * 
+ * Features:
+ *  - Compact
+ *  - Flat design
+ *  - Dark colors
+ * 
+ * Made for Trilium Notes v0.43.4
+ */
+
+
+/* Based on original Trilium dark theme */
+
+body.theme-dark-plus {
+    --main-background-color: #1E1E1E;
+    --main-text-color: #eeeeee;
+    --main-border-color: #484848;
+    --accented-background-color: #252526;
+    --more-accented-background-color: #777;
+    --header-background-color: #1E1E1E;
+    --button-background-color: transparent;
+    --button-border-color: transparent;
+    --button-text-color: white;
+    --button-border-radius: 0;
+    --primary-button-background-color: #888;
+    --primary-button-text-color: white;
+    --primary-button-border-color: #999;
+    --muted-text-color: #ccc;
+    --input-text-color: white;
+    --input-background-color: #333;
+    --hover-item-text-color: black;
+    --hover-item-background-color: #aaa;
+    --active-item-text-color: black;
+    --active-item-background-color: #ccc;
+    --menu-text-color: white;
+    --menu-background-color: #262626;
+    --tooltip-background-color: #333;
+    --link-color: lightskyblue;
+    --modal-background-color: #333;
+    --modal-backdrop-color: #444;
+    --scrollbar-border-color: #888;
+    --custom-tree-background: #252526;
+    --custom-tree-hover-background: #2a2d2e;
+    --custom-tree-active-background: #094771;
+    --custom-tree-selected-background: #094771;
+    --custom-menu-border-background: #7b7b7b;
+    --custom-selection-background: #ffffff;
+    --custom-context-highlight-background: #009185;
+}
+
+
+/*
+ * TODO: Increase font brightness
+ */
+
+ body.theme-dark-plus .CodeMirror {
+    filter: invert(90%) hue-rotate(180deg);
+}
+
+body.theme-dark-plus #left-pane {
+    background-color: var(--custom-tree-background);
+}
+
+body.theme-dark-plus {
+    font-family: system-ui, Ubuntu, Droid Sans, sans-serif !important;
+    font-size: 13px !important;
+}
+
+
+/*
+ * Tabs
+ */
+
+body.theme-dark-plus #root-widget .note-tab-row {
+    /* Beware! Hight precision pixel alignments xD */
+    height: 33px;
+    min-height: 33px;
+}
+
+body.theme-dark-plus .note-tab-title {
+    margin: 3px 4px !important;
+}
+
+body.theme-dark-plus .note-tab-row .note-tab .note-tab-wrapper {
+    border: none !important;
+    border-radius: 0 !important;
+    font-weight: inherit !important;
+    font-style: normal !important;
+}
+
+body.theme-dark-plus .note-tab-row .note-tab[active] .note-tab-wrapper {
+    font-style: italic !important;
+}
+
+
+/*
+ * Tab close button
+ */
+
+body.theme-dark-plus .note-tab .note-tab-close {
+    display: none;
+    color: inherit !important;
+    background-color: inherit !important;
+    cursor: pointer !important;
+}
+
+body.theme-dark-plus .note-tab .note-tab-close span {
+    cursor: pointer !important;
+}
+
+body.theme-dark-plus .note-tab:hover .note-tab-close,
+body.theme-dark-plus .note-tab[active] .note-tab-close {
+    display: block !important;
+}
+
+
+/*
+ * Title bar
+ */
+
+body.theme-dark-plus .global-menu-wrapper,
+body.theme-dark-plus .note-tab-row-container,
+body.theme-dark-plus .title-bar-buttons {
+    background-color: #252526;
+}
+
+body.theme-dark-plus #root-widget .global-menu-wrapper {
+    border-bottom: 0 !important;
+    height: 33px;
+}
+
+body.theme-dark-plus .title-bar-buttons button {
+    font-size: 100% !important;
+}
+
+body.theme-dark-plus .note-tab-row {
+    margin-top: 0 !important;
+}
+
+body.theme-dark-plus #root-widget .tab-row-filler .tab-row-border {
+    background: none;
+}
+
+body.theme-dark-plus #root-widget .note-tab-row .note-new-tab {
+    border-bottom: none;
+}
+
+body.theme-dark-plus #root-widget .note-tab-row .note-new-tab:hover {
+    background-color: var(--main-background-color);
+    border-radius: 0;
+}
+
+
+/* TODO: Change tab size, it is complicated. */
+
+
+/*
+ * Standard top widget bar
+ */
+
+body.theme-dark-plus #root-widget div.standard-top-widget {
+    padding-top: 0px !important;
+}
+
+body.theme-dark-plus #root-widget div.standard-top-widget button.btn.btn-sm {
+    font-size: 15px;
+}
+
+
+/*
+ * Dropdown menu & Context menu
+ */
+
+body.theme-dark-plus .dropdown-menu,
+body.theme-dark-plus .modal-content {
+    border: solid 1px var(--custom-menu-border-background) !important;
+    border-radius: 0.2rem !important;
+}
+
+body.theme-dark-plus .dropdown-menu .dropdown-item {
+    padding: 2px 7px 5px 10px !important;
+}
+
+body.theme-dark-plus #context-menu-container .dropdown-menu a:hover:not(.disabled),
+body.theme-dark-plus #context-menu-container .dropdown-item:hover:not(.disabled) {
+    color: var(--main-text-color) !important;
+    background-color: var(--custom-context-highlight-background) !important;
+}
+
+
+/*
+ * Tree
+ */
+
+body.theme-dark-plus span.fancytree-custom-icon {
+    display: none !important;
+}
+
+body.theme-dark-plus .fancytree-plain span.fancytree-title {
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 0 0 1px !important;
+}
+
+body.theme-dark-plus .fancytree-plain span.fancytree-node {
+    cursor: pointer !important;
+    padding-top: 2px !important;
+}
+
+body.theme-dark-plus .fancytree-plain span.fancytree-node:hover {
+    background-color: var(--custom-tree-hover-background) !important;
+}
+
+body.theme-dark-plus .fancytree-plain span.fancytree-node.fancytree-active:hover {
+    background-color: var(--custom-tree-active-background) !important;
+    /**/
+}
+
+body.theme-dark-plus .fancytree-plain span.fancytree-node:hover span.fancytree-title {
+    border: none !important;
+}
+
+body.theme-dark-plus .fancytree-node .fancytree-expander {
+    height: 23px !important;
+    margin-top: 0 !important;
+}
+
+body.theme-dark-plus .fancytree-node .fancytree-expander:before {
+    color: var(--main-text-color) !important;
+}
+
+body.theme-dark-plus span.fancytree-node.fancytree-active,
+body.theme-dark-plus span.fancytree-node.fancytree-active .fancytree-title,
+body.theme-dark-plus span.fancytree-node.fancytree-focused,
+body.theme-dark-plus span.fancytree-node.fancytree-focused .fancytree-title {
+    background-color: var(--custom-tree-active-background) !important;
+    color: var(--main-text-color) !important;
+}
+
+body.theme-dark-plus .fancytree-plain span.fancytree-node.fancytree-active span.fancytree-title {
+    border: none !important;
+    font-weight: normal !important;
+}
+
+body.theme-dark-plus .fancytree-plain span.fancytree-node:not(.fancytree-folder) .fancytree-expander {
+    display: none !important;
+}
+
+body.theme-dark-plus .fancytree-plain span.fancytree-node:not(.fancytree-folder) .fancytree-custom-icon {
+    padding-right: 19px !important;
+    display: inline-block !important;
+}
+
+
+/*
+ * Tree arrows form Codicons
+ */
+
+body.theme-dark-plus span.fancytree-expander:hover {
+    background-position: initial !important;
+}
+
+body.theme-dark-plus #root-widget .fancytree-node.fancytree-expanded .fancytree-expander:before,
+body.theme-dark-plus #root-widget .fancytree-node:not(.fancytree-loading) .fancytree-expander:before {
+    content: none !important;
+}
+
+body.theme-dark-plus #root-widget .fancytree-node:not(.fancytree-loading) .fancytree-expander,
+body.theme-dark-plus #root-widget .fancytree-node.fancytree-expanded .fancytree-expander {
+    width: 18px !important;
+    background-repeat: no-repeat !important;
+    margin-left: 3px !important;
+}
+
+body.theme-dark-plus #root-widget .fancytree-node:not(.fancytree-loading):not(.fancytree-expanded) .fancytree-expander {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' preserveAspectRatio='xMidYMid meet' viewBox='0 0 16 16'%3E%3Cg fill='white'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.072 8.024L5.715 3.667l.618-.62L11 7.716v.618L6.333 13l-.618-.619l4.357-4.357z'/%3E%3C/g%3E%3C/svg%3E") !important;
+    /* chevron right */
+}
+
+body.theme-dark-plus #root-widget .fancytree-node.fancytree-expanded .fancytree-expander {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cg fill='white'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.976 10.072l4.357-4.357l.62.618L8.284 11h-.618L3 6.333l.619-.618l4.357 4.357z'/%3E%3C/g%3E%3C/svg%3E") !important;
+    /* chevron down */
+}
+
+
+/*
+ * Tables
+ */
+
+body.theme-dark-plus .ck-content .table table td,
+body.theme-dark-plus .ck-content .table table th {
+    padding: .8em 0.5em !important;
+}
+
+
+/*******************
+ * Pseudo elements *
+ *******************/
+
+
+/*
+ * Selection
+ */
+
+
+/* TODO: Add selection styles, no matter what I did it stayed the same...
+
+/*
+ * Scrollbar
+ */
+
+body.theme-dark-plus ::-webkit-scrollbar-thumb {
+    border-radius: 0 !important;
+    border: none !important;
+    background-color: #424242 !important;
+}
+
+body.theme-dark-plus ::-webkit-scrollbar-thumb:hover {
+    background-color: #4f4f4f !important;
+}
+
+
+/*
+ * EOF
+ */
