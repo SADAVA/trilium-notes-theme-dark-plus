@@ -1,6 +1,8 @@
 
 ## Dark+ theme for Trillium Notes based on VS Code Dark+ Theme
 
+[[Screenshot_2.png]]
+
 License: `GNU General Public License v3.0`
 
 ## Installation:
