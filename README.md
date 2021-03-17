@@ -8,7 +8,7 @@ License: `GNU General Public License v3.0`
 ## Installation:
  - create a note named: `dark-plus`
  - set note type to `Code` or `CSS`
- - copy the contents of this file to that note
+ - copy the contents of [`dark-plus.css`](./dark-plus.css) file to that note
  - add a label attribute named: `appTheme`
  - go to `options -> appearence` and change the theme there
  - enjoy
